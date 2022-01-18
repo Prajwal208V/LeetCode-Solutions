@@ -1,5 +1,5 @@
-# LeetCode-Solutions
+# PrepBytes Elevation Academy - Full Stack Web Development Career
 <hr style="border-color:blue">
-<img style="" align="center" src="https://user-images.githubusercontent.com/92531202/149826099-ce3e9443-c20d-44e3-8c75-4776da823613.png" >
+<img style="" align="center" src="https://user-images.githubusercontent.com/92531202/149883981-2b3fa59c-1da2-4306-9b31-1724b52c940c.png" >
 <hr>
-<h3>Collection of LeetCode questions to ace the coding interview!</h3>
+<h3>Collection of Study Material interview!</h3>
