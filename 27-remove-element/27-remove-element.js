@@ -1,16 +1,14 @@
-/**
- * @param {number[]} nums
- * @param {number} val
- * @return {number}
- */
 var removeElement = function(nums, val) {
-    let start=0;
-    let countr=0;
-    for(let i=0;i<nums.length;i++){
-        if(nums[i]!==val){
-            nums[start++]=nums[i];
-            countr++;
+    let i = nums.length - 1;
+    let j = i;
+
+    while(j >= 0) {
+        if (nums[j] === val) {
+            nums[j] = nums[i];
+            i--;
         }
+        j--;
     }
-    return countr;
+    
+    return i+1;
 };
