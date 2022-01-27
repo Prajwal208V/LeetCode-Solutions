@@ -7,11 +7,6 @@ var diagonalSum = function(mat) {
     for(let i=0;i<mat.length;i++){
         count+=mat[i][i];
     }
-//     for(let i=0;i<mat.length;i++){
-//         for(let j=mat.length-1;j>=0;j--){
-            
-//         }
-//     }
     let i=0;
     let j=mat.length-1;
     while(j>=0){
