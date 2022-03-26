@@ -1,24 +1,34 @@
-
-
-class Solution {     
+class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-        int i=0,j=0;
-        sort(nums1.begin(),nums1.end());
-        sort(nums2.begin(),nums2.end());
-        vector<int> vec;
-        while(i<nums1.size() && j<nums2.size()){
-        if(nums1[i]>nums2[j])
-            j++;
-        else if(nums1[i]<nums2[j])
-            i++;
-        else{
-            vec.push_back(nums1[i]);
-            i++;
-            j++;
+        unordered_map<int,int> map1;
+        unordered_map<int,int> map2;
+        vector<int> result;
+      
+        for(int i=0;i<nums1.size();i++){
+          
+          if (map1.find(nums1[i]) == map1.end())
+            map1[nums1[i]]=1;
+          else 
+            map1[nums1[i]]++;
         }
+      
+        for(int i=0;i<nums2.size();i++){
+          
+          if (map2.find(nums2[i]) == map2.end())
+            map2[nums2[i]]=1;
+          else 
+            map2[nums2[i]]++;
         }
-        
-         return vec;   
+      
+        for(auto itr:map1){
+          if(map2.find(itr.first) != map2.end()){
+            int i=min(map2[itr.first], map1[itr.first]);
+            while(i--){
+              result.push_back(itr.first);
+            }
+          }
+        }
+      return result;
     }
 };
