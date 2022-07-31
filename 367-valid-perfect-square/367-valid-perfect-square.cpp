@@ -1,10 +1,8 @@
 class Solution {
 public:
     bool isPerfectSquare(int num) {
-        if(num>=0){
-          long long sr=sqrt(num);
-          if(sr*sr==num)
-            return true;
+        if (ceil((double)sqrt(num)) == floor((double)sqrt(num))) {
+          return true;
         }
       return false;
     }
