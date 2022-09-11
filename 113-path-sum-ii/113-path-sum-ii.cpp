@@ -21,7 +21,6 @@ class Solution {
              result.push_back(tempArr);
           pathSum(root->left,targetSum,tempArr,sum);
           pathSum(root->right,targetSum,tempArr,sum);
-          // tempArr.pop_back();
       }
 public:
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
